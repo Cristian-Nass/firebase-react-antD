@@ -4,17 +4,17 @@ import { db } from "./firebase";
 export const ListOfUsers = () => {
 
 	useEffect(() => {
-        db.collection('users').get()
-            .then(res => {
-                res.docs.forEach(doc => {
-                    console.log(doc.data());
-                })
-            })
+		db.collection('users').get()
+		.then(res => {
+			res.docs.forEach(doc => {
+				console.log(doc.data());
+			})
+		})
 	}, [])
 	
-  	return (
+	return (
 		<div>
-            Hello
+			Hello
 		</div>
   );
 };
