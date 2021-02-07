@@ -3,13 +3,17 @@ import { db } from "./firebase";
 
 export const ListOfUsers = () => {
 
-	useEffect(() => {
+	const getUsers = () => {
 		db.collection('users').get()
 		.then(res => {
 			res.docs.forEach(doc => {
 				console.log(doc.data());
 			})
 		})
+	}
+
+	useEffect(() => {
+		getUsers();
 	}, [])
 	
 	return (
