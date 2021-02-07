@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-import { ListOfUsers } from './ListUsers';
+import { ListOfUsers } from './components/ListUsers';
 
 function App() {
   return (
