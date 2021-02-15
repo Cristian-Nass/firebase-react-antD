@@ -1,15 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {useCollection} from "react-firebase-hooks/firestore";
-import Table, { ColumnsType } from "antd/lib/table";
-
-import { db } from "../firebase";
+import Table, {ColumnsType} from "antd/lib/table";
+import {db} from "../firebase";
 
 export interface UsersModel {
   firstName: string;
   lastName: string;
   email: string;
 }
-
 
 export const ListOfUsers = () => {
 
@@ -19,7 +17,6 @@ export const ListOfUsers = () => {
       snapshotListenOptions: {includeMetadataChanges: true}
     }
   );
-
 
 	// const getUsers = () => {
 	// 	db.collection('users').get()
@@ -58,8 +55,8 @@ export const ListOfUsers = () => {
         loading={loading}
         rowKey={"id"}
         dataSource={querySnapshot?.docs?.map((doc: any) => {
-          const emailTemplate = {...doc.data(), id: doc.id};
-          return emailTemplate as UsersModel;
+          const users = {...doc.data(), id: doc.id};
+          return users as UsersModel;
         })}
         columns={columns}
       />
