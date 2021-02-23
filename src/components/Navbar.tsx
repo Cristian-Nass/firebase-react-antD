@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from 'antd';
 import {Link} from 'react-router-dom';
-import { HomeOutlined, UnorderedListOutlined, BookOutlined } from '@ant-design/icons';
+import { HomeOutlined, UnorderedListOutlined, BookOutlined, LoginOutlined } from '@ant-design/icons';
 
 
 const Navbar = () => {
@@ -15,17 +15,22 @@ const Navbar = () => {
 
 	return (
 		<Menu onClick={handleClick} mode="horizontal" theme="dark">
-			<Menu.Item key="mail" icon={<HomeOutlined />}>
+			<Menu.Item key="home" icon={<HomeOutlined />}>
 				<Link to={'/'}>Home</Link>
 			</Menu.Item>
 
-			<Menu.Item key="app" icon={<UnorderedListOutlined />}>
+			<Menu.Item key="list" icon={<UnorderedListOutlined />}>
 			<Link to={'/list-of-users'}>Lisat Of Users</Link>
 			</Menu.Item>
 
-			<Menu.Item key="alipay" icon={<BookOutlined />}>
+			<Menu.Item key="about" icon={<BookOutlined />}>
 			<Link to={'/about'}>About</Link>
 			</Menu.Item>
+
+			<Menu.Item key="login" icon={<LoginOutlined />}>
+			<Link to={'/login'}>Login</Link>
+			</Menu.Item>
+
 		</Menu>  
 	);
 };

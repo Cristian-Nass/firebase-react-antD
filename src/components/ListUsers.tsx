@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import {useCollection} from "react-firebase-hooks/firestore";
 import Table, {ColumnsType} from "antd/lib/table";
 import {db} from "../firebase";
-import { SortableContainer, SortableElement, SortableHandle } from "react-sortable-hoc";
+import {SortableContainer, SortableElement, SortableHandle} from "react-sortable-hoc";
 import {MenuOutlined} from "@ant-design/icons/lib";
 import arrayMove from 'array-move';
 
