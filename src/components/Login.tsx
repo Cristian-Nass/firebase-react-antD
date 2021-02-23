@@ -22,13 +22,30 @@ const Login = () => {
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
-        >
+        layout="vertical"
+      >
         <Form.Item
-          label="Username"
-          name="username"
-          rules={[{ required: true, message: 'Please input your username!' }]}
+          label="First Name"
+          name="firstname"
+          rules={[{ required: true, message: 'Please input your first name!' }]}
           >
-          <Input />
+          <Input className="input-register-form" />
+        </Form.Item>
+
+        <Form.Item
+          label="Last Name"
+          name="lastname"
+          rules={[{ required: true, message: 'Please input your last name!' }]}
+          >
+          <Input className="input-register-form" />
+        </Form.Item>
+
+        <Form.Item
+          label="Email"
+          name="email"
+          rules={[{ required: true, message: 'Please input your email name!' }]}
+          >
+          <Input className="input-register-form" />
         </Form.Item>
 
         <Form.Item
@@ -36,7 +53,7 @@ const Login = () => {
           name="password"
           rules={[{ required: true, message: 'Please input your password!' }]}
           >
-          <Input.Password />
+          <Input.Password className="input-register-form" />
         </Form.Item>
 
         <Form.Item>
